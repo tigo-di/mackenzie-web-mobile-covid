@@ -1,0 +1,348 @@
+/* variáveis */
+
+:root {
+  --pageBackground: #f0f0f0;
+  --cardBackground: #fff;
+  --fontColor: #393939;
+  --shadows: rgba(57, 57, 57, 0.2);
+  --mainColor: #2e87ff;
+  --contrastMainColor: #002351;
+}
+
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+/* estilos básicos */
+
+* {
+  font-family: Verdana, sans-serif;  
+  color: var(--fontColor);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--pageBackground);
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  margin: 20px;
+  box-shadow: 0 0 10px var(--shadows);
+  border-radius: 10px;
+  background-color: var(--cardBackground);
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+article ul {
+  margin:20px auto
+}
+
+
+article ul.region {
+  width: 89%;
+}
+
+article ul.region { 
+
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+
+}
+
+article ul:last-of-type.region { 
+  padding-bottom: 20px;
+  border: 0;
+
+}
+
+
+
+article a {
+  text-align: center;
+  font-size: 1.14rem;
+  display: block;
+  padding: 8px 0;
+}
+article li {
+  
+  font-size: 1.6rem;
+  font-weight: 400;
+  list-style: none;
+  line-height: 18px;
+  position: relative;
+  
+
+  margin-bottom: 40px;
+
+  padding-left: 40px;
+
+
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  
+}
+
+article li:last-of-type { 
+  margin-bottom: 0;
+}
+
+
+article li span { 
+
+  display: block;
+  font-weight: 400;
+  font-style: italic;
+  font-size: .9rem;
+
+}
+
+
+article ul li.regioes { 
+  background-image: url(../img/iconRegion.png);
+}
+
+
+
+article li.casos { 
+  background-image: url(../img/iconCasesBlue.png);
+}
+
+article li.mortes { 
+  background-image: url(../img/iconDeathRed.png);
+}
+
+
+
+article h1 {
+  
+  position: relative;
+  display: inline;
+  top: -20px;
+
+}
+
+
+article h1 span {
+  
+  display: inline-block;
+  padding: 12px 18px;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: var(--mainColor);
+  
+  
+}
+
+
+button#back {
+  
+  cursor: pointer;
+  background-color: var(--mainColor);
+
+  color: aliceblue;
+  font-weight: 800;
+  padding: 20px 0;
+
+
+  width: 100vw;
+
+  position: fixed;
+  bottom: 0px;
+  z-index: 99;
+
+}
+
+
+figure {
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+
+article figure::before {
+  content: ""; 
+  background-repeat: no-repeat;
+  background-size:cover;
+  position:absolute;
+  top:20px;
+  width: 100px;
+  height: 100px;
+  left:-35px;
+  z-index: 9;
+ }
+ 
+
+
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  
+  text-align: center;
+}
+
+
+
+/* mobile */
+
+* {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  letter-spacing: -1px;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  flex-direction: column;
+  
+  padding: 0 0 65px;
+}
+
+
+
+header {
+
+  background-color: var(--mainColor);
+  padding: 35px 0;
+
+}
+
+header h1 {
+  color: var(--contrastMainColor);
+  font-size: 1.9rem;
+
+  
+  color: #fff;
+  
+
+
+}
+
+header p {
+  
+  color: rgb(9, 45, 155);
+  
+  text-align: center;
+  font-size: .9rem;
+
+}
+
+/*  web e outros dispositivos */
+
+@media only screen and (min-width: 920px) {
+  * {
+    font-size: 12px;
+  }
+
+
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+  }
+
+header h1 {
+  
+  font-size: 3.2rem;
+  
+}
+
+header p {
+  padding-top: 10px;
+  font-size: 1.4rem;
+  
+}
+
+
+  
+  main {
+    display: flex;
+    
+    justify-content: center;
+    align-items: flex-start;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+    
+    padding: 30px 0 45px;
+  }
+
+  
+
+  article {
+    width: 22%;
+  }
+
+  article h1 span {
+    font-size: 2.1rem;
+
+  }
+
+  article.region {
+    width: 80%;
+  }
+
+
+
+
+article ul.region {
+  
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0;
+  
+  
+}
+article ul.region li {
+  margin-right: 30px;
+}
+
+article ul.region li:last-of-type { 
+  margin-bottom: auto;
+}
+
+
+
+
+  button#back {
+    
+    width: 100%;
+    align-self: center;
+    order: 2;
+    
+  }
+
+
+}
